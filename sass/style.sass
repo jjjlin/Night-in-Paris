@@ -1,0 +1,303 @@
+@mixin flex_center
+	display: flex
+	justify-content: center
+	align-items: center
+@mixin center
+	display: flex
+	justify-content: center
+	align-items: center
+@mixin size($w,$h)
+	width: $w
+	height: $h
+@mixin center
+	position: absolute
+	left: 60%
+	top: 50%
+	transform: translateX(-50%) translateY(-50%)
+*
+	font-family: 微軟正黑體
+	box-sizing: border-box
+p
+	margin: 0
+body,html
+
+	height: 100%
+	width: 100%
+	padding: 0
+	margin: 0
+.head
+	background-attachment: fixed
+	position: relative
+	background-image: url(http://media.nj.com/health_and_fitness_multiblog/photo/ThinkstockPhotos-179321951.JPG)
+	background-repeat: no-repeat
+	width: 100%
+	height: 100%
+	background-size: cover
+	filter: brightness(0.9)
+	background-position: center 90%
+		
+	h1
+		font-family: 'Dancing Script'
+		color: white
+		font-size: 50px
+		+center
+		margin-left: 18%
+		margin-top: 80px
+	p
+		font-weight: bold
+		color: white
+		+center
+		margin-left: 18%
+		margin-top: 140px
+
+
+
+.section.intro
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/807677/fabric.png)
+	// background-color: #212121
+	.container
+		margin: 0 auto
+		width: 1100px
+		padding: 20px
+
+		h2
+			text-align: center
+			color: black
+		hr
+			border-width: 4px
+			width: 100px
+			margin: 0 auto
+			// border-color: rgba(0,0,0,0.7)
+		.block
+			margin-top: 30px
+		.news
+			margin-bottom: 40px
+			margin-left: 30px
+			display: inline-block
+			width: 300px
+			transition: 0.5s
+			box-shadow: 5px 5px 10px #666
+			&:hover
+				box-shadow: 10px 10px 20px #666
+				transform: scale(1.05,1.05)
+				transition: 0.5s
+				// img
+				// 	transform: scale(1.1,1.1)
+				// 	transition-duration: 1s
+			.top
+				overflow: hidden
+				height: 210px
+				img
+					width: 100%
+					transition-duration: 1s
+			.down
+				padding: 10px 25px
+				background-color: #fff
+				.logo
+					margin-top: 10px	
+					i
+						font-size: 30px
+						color: rgba(0,0,0,0.5)
+					display: inline-block
+				.title
+					margin-left: 10px
+					margin-top: 10px
+					color: #666666
+					display: inline-block
+					font-size: 20px
+				.textarea
+					p
+						font-family: 'Slabo 27px'
+						color: #777777
+						padding: 10px 0px
+						margin: 0
+						line-height: 18px
+						font-size: 16px
+				.btn
+					margin: 10px auto 20px
+					text-align: center
+					width: 150px
+					padding: 8px 20px
+					background-color: #ccc
+					color: #ffffff
+					font-weight: bold
+					cursor: pointer
+					transition-duration: 0.5s
+					&:hover
+						transition-duration: 0.5s
+						background-color: #117964
+					p
+						margin: 0
+				
+.section.food
+	h2
+		text-align: center
+	
+	hr
+		border-width: 4px
+		width: 100px
+		margin: 0 auto
+		// border-color: rgba(0,0,0,0.7)
+	+size(100%,400px)
+	overflow: hidden
+	background-image: url(https://www.tempaperdesigns.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/b/r/brick_white_textured_br096_swatch_1.png)
+	// filter: brightness(0.9)
+
+#app
+	+size(100%,100%)
+	+flex_center
+	position: relative
+.postarea
+	+size(1050px,250px)
+	margin-top: -50px
+	white-space: nowrap
+.posts
+	position: relative
+	height: 100%
+	transition: 0.5s
+	.postbox
+		height: 100%
+		display: inline-block
+		.cover
+			+size(500px,100%)
+			margin-left: 50px
+			margin-right: 600px
+			background-size: cover
+			background-position: center center
+			+flex_center
+			transition: 0.5s
+			&:hover
+				transition-duration: 0.5s
+				+size(520px,110%)
+				.cover
+					background-size: 110% auto
+				.infos
+					transform: translateX(480px) translateY(-10px)
+		.infos
+			color: white
+			transform: translateX(510px)
+			text-shadow: 0px 0px 30px rgba(red,0.7)
+			transition: 0.5s
+			*
+				margin: 0
+			h3
+				color: black
+				font-size: 20px
+				font-weight: bold	
+
+.control_left , .control_right
+	position: absolute
+	+size(40px,40px)
+	border-radius: 50%
+	border: solid 1px white
+	font-size: 30px
+	color: white
+	background-color: #666
+	cursor: pointer
+	margin-top: -20px
+	+flex_center
+	&:hover
+		background-color: #555
+
+		color: white
+.control_left
+	top: 50%
+	left: 50px
+	transform: translateY(-50%)
+.control_right
+	top: 50%
+	right: 50px
+	transform: translateY(-50%)
+
+.cur_item
+	.cover
+		animation: fadeIn 1s ease both  
+	.infos
+		h3 
+			animation: sliceIn 1s 0.1s ease both
+
+@keyframes sliceIn
+	0%
+		transform: translateX(150px)
+	100%
+		transform: translateX(0px)
+
+@keyframes fadeIn
+	10%
+		opacity: 0
+		filter: saturate(0%)
+		transform: translateX(30px)
+	100%
+		opacity: 1
+		filter: saturate(100%)
+		transform: translateX(0px)
+.section.intro3
+	padding-top: 20px
+	position: relative
+	+size(100%,450px)
+	/*可調整背景圖案透明度*/
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background: url(https://www.kreativphoto.com/wp-content/uploads/2016/11/dw0ydn312uhcbpz1fonuejqnabmz9n1ypgiysct1dtspfa5wjskw6t5ysquandqf-o.jpg)
+		opacity: 1.0
+		z-index: -1
+		padding: 0px 40px
+	h2
+		text-align: center
+	hr
+		border-width: 4px
+		width: 100px
+		margin: 0 auto
+		// border-color: rgba(0,0,0,0.7)
+	#it3_container
+		overflow: hidden
+		position: relative
+		left: 150px
+		width: 500px
+		height: 250px
+		margin-top: 40px
+		.slideshow img
+			width: 100%
+				
+		
+// .footer
+// 	margin-top: 50px
+// 	position: relative
+// 	height: 500px
+// 	width: 100%
+// 	background-image: url(http://v.wxrw123.com/?url=http://mmbiz.qpic.cn/mmbiz/5feXIiajDItf8T2YZoxCuVrhFMrVibfeZ8KGD7No9nL7bCUtpviblEmIia4okbL7aHqTNdGd4zWmcO83WfxVNZvibbg/0?wx_fmt=jpeg)
+// 	background-size: cover
+// 	background-attachment: fixed
+// 	text-align: center
+// 	color: #fff
+// 	.wraper
+// 		display: inline-block
+// 		position: absolute
+// 		top: 50%
+// 		left: 50%
+// 		transform: translateX(-50%) translateY(-50%)
+// 		input
+// 			background-color: transparent
+// 			width: 400px
+// 			height: 40px
+// 			border-radius: 5px
+// 			text-align: center
+// 			color: #fff
+// 			font-size: 16px
+// 		button
+// 			padding: 12px 16px
+// 			border-radius: 5px
+// 			background-color: #fff
+// 			font-weight: bold
+			
+// 		hr
+// 			margin-top: 20px
+// 			margin-bottom: 20px
+// 			border: solid 2px #ff6e3a
+// 			max-width: 50px

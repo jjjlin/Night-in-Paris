@@ -1,0 +1,87 @@
+.head
+	h1 Night in Paris
+	p 讓你我重新找回屬於自己的人文氣息
+.header
+.section.intro
+	.container
+		h2 最新消息
+		hr
+		.block
+			.news
+				.top
+					img(src="https://s3-media4.fl.yelpcdn.com/bphoto/KlV09ZUw10fqHr93mYzSBQ/o.jpg", alt="")
+				.down
+					.logo
+						i.fa.fa-cutlery
+					.title 美式格子鬆餅
+					.textarea
+						p Lorem ipsum dolor sit amet, conse adipisicing elit. Quae vitae ducimus, laboriosam nemo. Alias, vero saepe, autem distinctio doloribus fuga, quibusdam
+					.btn
+						p LEARN MORE
+			.news
+				.top
+					img(src="https://s3-media4.fl.yelpcdn.com/bphoto/5JzO26HVScKhCXqHNrSbbg/258s.jpg", alt="")
+				.down
+					.logo
+						i.fa.fa-cutlery
+					.title 新飲品上市
+					.textarea
+						p Lorem ipsum dolor sit amet, conse adipisicing elit. Quae vitae ducimus, laboriosam nemo. Alias, vero saepe, autem distinctio doloribus fuga, quibusdam
+					.btn
+						p LEARN MORE
+			.news
+				.top
+					img(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS64LpV1OA6YNVtzmH26USd4iZGmu9GXXrBasmU1ytSGqvQIVdZ", alt="")
+				.down
+					.logo
+						i.fa.fa-cutlery
+					.title 徵求晚班工讀生
+					.textarea
+						p Lorem ipsum dolor sit amet, conse adipisicing elit. Quae vitae ducimus, laboriosam nemo. Alias, vero saepe, autem distinctio doloribus fuga, quibusdam
+					.btn
+						p LEARN MORE
+.section.food
+	h2 招牌商品
+	hr
+	#app
+		.postarea
+			.posts(:style="compute_left")
+				.postbox(v-for="(w,id) in works",:class="{cur_item: id==now_index}")
+					.cover(:style="bg_css(w.url)")
+
+						.infos
+							h1 {{w.title}}
+							h3 {{w.description}}
+		.control_left(@click="delta(-1)")
+			i.fa.fa-angle-left
+		.control_right(@click="delta(1)")
+			i.fa.fa-angle-right
+
+.section.intro3
+	h2 環境介紹
+	hr
+	#it3_container
+		.slideshow
+			img(src='https://scontent.xx.fbcdn.net/v/t1.0-9/17264294_1356857467707483_1762301226276976614_n.jpg?oh=52c02909d7b03f49078764ba8d3e7479&oe=59A20E3B')
+			img(src='https://scontent.xx.fbcdn.net/v/t1.0-9/12122944_971464502913450_1803429893296432501_n.jpg?oh=e4b0dbe5e3efcfb382f351bdfc5bf7d6&oe=59B361E2')
+			img(src='https://scontent.xx.fbcdn.net/v/t1.0-9/12088038_971464626246771_6706620398441761922_n.jpg?oh=070eb2c9d20e26f975dbace0309fdf2c&oe=59E7688F')
+			img(src='https://scontent.xx.fbcdn.net/v/t1.0-9/944007_1066887216704511_7905248037776193509_n.jpg?oh=f9f0c56da3912a93e094c5c1ef3f86e3&oe=59B5F861')
+
+
+
+		//- .i3_textbox
+		//- 	p 人生難免遇到一些不順遂的事情
+		//- 	br
+		//- 	p 停下來，點支菸，來一杯午後的悠閒
+		//- 	br
+		//- 	p 將煩躁的瑣事暫緩一會兒
+		//- 	br
+		//- 	p 然後，一切將如同往常一樣，迎刃而解
+		//- 	br
+		//- 	p 我在夜巴黎，天氣「有點悶」。
+//- .footer
+//- 	.wraper
+//- 		h2 想更了解夜巴黎嗎?
+//- 		input(placeholder="E-mail")
+//- 		hr
+//- 		button 聯絡我們
