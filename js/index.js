@@ -29,7 +29,7 @@ var vm =new Vue({
 	el: "#app",
 	data: {
 		now_index: 0,
-		span: 1150,
+		span: 1220,
 		works: works
 	},
 	computed:{
@@ -57,7 +57,7 @@ var vm =new Vue({
 
 $(document).ready(function() {
 
-  $('.slideshow').cycle({
+  $('#it3_container').cycle({
   
     fx:'fade',      /* type of transition */
     timeout: 2000,  /* time between transitions */

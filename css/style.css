@@ -9,6 +9,7 @@ p {
 }
 
 body, html {
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -137,12 +138,13 @@ body, html {
 
 .section.food {
   width: 100%;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   background-image: url(https://www.tempaperdesigns.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/b/r/brick_white_textured_br096_swatch_1.png);
 }
 .section.food h2 {
   text-align: center;
+  margin-top: 50px;
 }
 .section.food hr {
   border-width: 4px;
@@ -151,6 +153,7 @@ body, html {
 }
 
 #app {
+  padding-bottom: 90px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -179,7 +182,7 @@ body, html {
   width: 500px;
   height: 100%;
   margin-left: 50px;
-  margin-right: 600px;
+  margin-right: 670px;
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -300,14 +303,72 @@ body, html {
   width: 100px;
   margin: 0 auto;
 }
-.section.intro3 #it3_container {
-  overflow: hidden;
+.section.intro3 .out {
+  width: 1050px;
+  height: 250px;
+  margin: 0 auto;
+}
+.section.intro3 .out #it3_container {
   position: relative;
-  left: 150px;
+  margin-left: 50px;
   width: 500px;
   height: 250px;
-  margin-top: 40px;
 }
-.section.intro3 #it3_container .slideshow img {
+.section.intro3 .out #it3_container .show_info {
+  margin-top: 30px;
   width: 100%;
+  height: 100%;
+}
+.section.intro3 .out #it3_container .show_info .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.section.intro3 .out #it3_container .show_info .wrap img {
+  width: 100%;
+}
+.section.intro3 .out #it3_container .show_info h3 {
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.footer {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url(http://v.wxrw123.com/?url=http://mmbiz.qpic.cn/mmbiz/5feXIiajDItf8T2YZoxCuVrhFMrVibfeZ8KGD7No9nL7bCUtpviblEmIia4okbL7aHqTNdGd4zWmcO83WfxVNZvibbg/0?wx_fmt=jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+}
+.footer .wraper {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.footer .wraper input {
+  background-color: transparent;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.footer .wraper button {
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+}
+.footer .wraper hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 2px #ff6e3a;
+  max-width: 50px;
 }
