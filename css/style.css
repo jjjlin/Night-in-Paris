@@ -290,12 +290,15 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(https://www.kreativphoto.com/wp-content/uploads/2016/11/dw0ydn312uhcbpz1fonuejqnabmz9n1ypgiysct1dtspfa5wjskw6t5ysquandqf-o.jpg);
-  opacity: 1;
+  background: url(https://static1.squarespace.com/static/52a0dabde4b0736bd37d582d/52a0db90e4b00096a0601d05/52a73f16e4b09a1e4a70aa43/1456170124933/coffee-Brights+Blend.jpg);
+  opacity: 0.7;
   z-index: -1;
   padding: 0px 40px;
+  background-size: cover;
+  background-position: 5% 12%;
 }
 .section.intro3 h2 {
+  color: black;
   text-align: center;
 }
 .section.intro3 hr {
@@ -328,6 +331,8 @@ body, html {
   width: 100%;
 }
 .section.intro3 .out #it3_container .show_info h3 {
+  color: black;
+  opacity: 1 !important;
   position: absolute;
   top: 50%;
   right: -50%;
@@ -336,9 +341,9 @@ body, html {
 
 .footer {
   position: relative;
-  height: 500px;
+  height: 350px;
   width: 100%;
-  background-image: url(http://v.wxrw123.com/?url=http://mmbiz.qpic.cn/mmbiz/5feXIiajDItf8T2YZoxCuVrhFMrVibfeZ8KGD7No9nL7bCUtpviblEmIia4okbL7aHqTNdGd4zWmcO83WfxVNZvibbg/0?wx_fmt=jpeg);
+  background-image: url(http://www.healthline.com/hlcmsresource/images/topic_centers/Food-Nutrition/Coffee1-banner.jpg);
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
